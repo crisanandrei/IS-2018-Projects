@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="41.90961538461539" y="144.86783854166669">com.is.AutoShop.repository</node>
+    <node x="136.38333333333333" y="15.867838541666686">com.is.AutoShop.model</node>
+    <node x="0.0" y="223.86783854166669">com.is.AutoShop.services</node>
+    <node x="99.21538461538462" y="302.8678385416667">com.is.AutoShop.controllers</node>
+    <node x="140.0" y="223.86783854166669">com.is.AutoShop.config</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.is.AutoShop.services" target="com.is.AutoShop.repository">
+      <point x="15.0" y="-14.5" />
+      <point x="75.0" y="198.86783854166669" />
+      <point x="63.90961538461539" y="198.86783854166669" />
+      <point x="-44.0" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.config" target="com.is.AutoShop.repository">
+      <point x="-37.66666666666666" y="-14.5" />
+      <point x="158.83333333333334" y="198.86783854166669" />
+      <point x="151.9096153846154" y="198.86783854166669" />
+      <point x="44.0" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.repository" target="com.is.AutoShop.model">
+      <point x="0.0" y="-14.5" />
+      <point x="107.90961538461539" y="124.86783854166669" />
+      <point x="198.5333333333333" y="124.86783854166669" />
+      <point x="5.650000000000006" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.services" target="com.is.AutoShop.model">
+      <point x="-15.0" y="-14.5" />
+      <point x="45.0" y="198.86783854166669" />
+      <point x="31.409615384615392" y="198.86783854166669" />
+      <point x="31.409615384615392" y="114.86783854166669" />
+      <point x="187.23333333333335" y="114.86783854166669" />
+      <point x="-5.649999999999977" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.controllers" target="com.is.AutoShop.services">
+      <point x="-50.625" y="-14.5" />
+      <point x="116.09038461538462" y="282.8678385416667" />
+      <point x="30.0" y="282.8678385416667" />
+      <point x="-30.0" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.controllers" target="com.is.AutoShop.model">
+      <point x="50.625" y="-14.5" />
+      <point x="217.3403846153846" y="282.8678385416667" />
+      <point x="274.5" y="282.8678385416667" />
+      <point x="274.5" y="114.86783854166669" />
+      <point x="243.73333333333335" y="114.86783854166669" />
+      <point x="50.85000000000002" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.model" target="com.is.AutoShop.model">
+      <point x="-39.55" y="14.5" />
+      <point x="153.33333333333331" y="74.86783854166669" />
+      <point x="106.38333333333331" y="74.86783854166669" />
+      <point x="106.38333333333331" y="30.367838541666686" />
+      <point x="-56.5" y="-0.0" />
+    </edge>
+    <edge source="com.is.AutoShop.config" target="com.is.AutoShop.model">
+      <point x="37.66666666666666" y="-14.5" />
+      <point x="234.16666666666666" y="198.86783854166669" />
+      <point x="222.92371794871795" y="198.86783854166669" />
+      <point x="222.92371794871795" y="124.86783854166669" />
+      <point x="221.13333333333333" y="124.86783854166669" />
+      <point x="28.25" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="2.0000000000000004" x="242.60456014573668" y="420.5904761904761" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

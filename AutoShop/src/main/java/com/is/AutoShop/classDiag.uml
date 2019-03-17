@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="233.90711382113824" y="238.0">com.is.AutoShop.repository.ClientRepository</node>
+    <node x="164.95535714285717" y="407.0">com.is.AutoShop.config.ConfigDb</node>
+    <node x="499.42378048780495" y="238.0">com.is.AutoShop.services.EmployeServiceInterface</node>
+    <node x="0.0" y="481.0">com.is.Ticketing.config.SpringBootWelcomePageConfiguration</node>
+    <node x="934.423780487805" y="238.0">com.is.AutoShop.services.CarServiceInterface</node>
+    <node x="775.6696283391406" y="407.0">com.is.AutoShop.controllers.AdminController</node>
+    <node x="350.90711382113824" y="109.0">com.is.AutoShop.model.Client</node>
+    <node x="696.423780487805" y="238.0">com.is.AutoShop.services.ClientServiceInterface</node>
+    <node x="975.923780487805" y="109.0">com.is.AutoShop.model.Car</node>
+    <node x="1136.798780487805" y="407.0">com.is.AutoShop.services.CarService</node>
+    <node x="441.8696138211383" y="0.0">com.is.AutoShop.model.Employee</node>
+    <node x="899.173780487805" y="0.0">com.is.AutoShop.model.FuelType</node>
+    <node x="302.0" y="481.0">com.is.AutoShop.AutoShop</node>
+    <node x="17.625" y="238.0">com.is.AutoShop.repository.EmployeeRepository</node>
+    <node x="1104.423780487805" y="238.0">com.is.AutoShop.repository.CarRepository</node>
+    <node x="304.51250000000005" y="407.0">com.is.AutoShop.services.ClientService</node>
+    <node x="957.6237804878049" y="407.0">com.is.AutoShop.controllers.HomeController</node>
+    <node x="0.0" y="407.0">com.is.AutoShop.services.EmployeeService</node>
+    <node x="455.2839624467674" y="407.0">com.is.AutoShop.controllers.LoginController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.is.AutoShop.controllers.LoginController" target="com.is.AutoShop.model.Client">
+      <point x="-49.125" y="-14.5" />
+      <point x="471.6589624467674" y="337.0" />
+      <point x="434.36035133565633" y="337.0" />
+      <point x="434.36035133565633" y="188.0" />
+      <point x="399.18489159891607" y="188.0" />
+      <point x="8.777777777777828" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.controllers.AdminController" target="com.is.AutoShop.services.CarServiceInterface">
+      <point x="51.375" y="-14.5" />
+      <point x="895.5446283391406" y="367.0" />
+      <point x="949.3237804878049" y="367.0" />
+      <point x="-59.60000000000002" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.config.ConfigDb" target="com.is.AutoShop.model.Car">
+      <point x="14.14285714285711" y="-14.5" />
+      <point x="228.59821428571428" y="337.0" />
+      <point x="223.40711382113824" y="337.0" />
+      <point x="223.40711382113824" y="198.0" />
+      <point x="980.6380662020906" y="198.0" />
+      <point x="-28.285714285714334" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.config.ConfigDb" target="com.is.AutoShop.model.Client">
+      <point x="0.0" y="-14.5" />
+      <point x="214.45535714285717" y="337.0" />
+      <point x="212.40711382113824" y="337.0" />
+      <point x="212.40711382113824" y="178.0" />
+      <point x="364.073780487805" y="178.0" />
+      <point x="-26.333333333333258" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.controllers.HomeController" target="com.is.AutoShop.model.Car">
+      <point x="53.60000000000002" y="-14.5" />
+      <point x="1078.223780487805" y="377.0" />
+      <point x="1093.9237804878048" y="377.0" />
+      <point x="1093.9237804878048" y="218.0" />
+      <point x="1018.3523519163764" y="218.0" />
+      <point x="9.428571428571445" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.services.EmployeeService" target="com.is.AutoShop.model.Employee">
+      <point x="-51.375" y="-14.5" />
+      <point x="17.125" y="387.0" />
+      <point x="7.125" y="387.0" />
+      <point x="7.125" y="49.0" />
+      <point x="450.20294715447153" y="49.0" />
+      <point x="-41.666666666666686" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.services.CarService" target="com.is.AutoShop.repository.CarRepository">
+      <point x="-12.875" y="-14.5" />
+      <point x="1175.423780487805" y="387.0" />
+      <point x="1165.423780487805" y="387.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.controllers.AdminController" target="com.is.AutoShop.services.EmployeServiceInterface">
+      <point x="-51.37499999999994" y="-14.5" />
+      <point x="792.7946283391406" y="337.0" />
+      <point x="646.923780487805" y="337.0" />
+      <point x="59.0" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.controllers.AdminController" target="com.is.AutoShop.services.ClientServiceInterface">
+      <point x="-39.95833333333326" y="-14.5" />
+      <point x="804.2112950058073" y="327.0" />
+      <point x="777.423780487805" y="327.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.services.EmployeServiceInterface" target="com.is.AutoShop.model.Employee">
+      <point x="0.0" y="-14.5" />
+      <point x="587.923780487805" y="188.0" />
+      <point x="607.7006291134342" y="188.0" />
+      <point x="607.7006291134342" y="69.0" />
+      <point x="500.20294715447153" y="69.0" />
+      <point x="8.333333333333314" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.controllers.AdminController" target="com.is.AutoShop.model.Employee">
+      <point x="-5.708333333333314" y="-14.5" />
+      <point x="838.4612950058072" y="317.0" />
+      <point x="879.923780487805" y="317.0" />
+      <point x="879.923780487805" y="59.0" />
+      <point x="516.8696138211383" y="59.0" />
+      <point x="25.0" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.config.ConfigDb" target="com.is.AutoShop.model.FuelType">
+      <point x="-28.285714285714334" y="-14.5" />
+      <point x="186.16964285714283" y="337.0" />
+      <point x="190.40711382113824" y="337.0" />
+      <point x="190.40711382113824" y="79.0" />
+      <point x="911.173780487805" y="79.0" />
+      <point x="-36.0" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.model.Car" target="com.is.AutoShop.model.FuelType">
+      <point x="16.5" y="-14.5" />
+      <point x="1025.4237804878048" y="79.0" />
+      <point x="983.173780487805" y="79.0" />
+      <point x="36.0" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.controllers.HomeController" target="com.is.AutoShop.services.CarServiceInterface">
+      <point x="26.799999999999955" y="-14.5" />
+      <point x="1051.4237804878048" y="377.0" />
+      <point x="1038.723780487805" y="377.0" />
+      <point x="29.799999999999955" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.services.ClientServiceInterface" target="com.is.AutoShop.model.Client">
+      <point x="0.0" y="-14.5" />
+      <point x="777.423780487805" y="168.0" />
+      <point x="416.7404471544715" y="168.0" />
+      <point x="26.333333333333258" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.services.ClientService" target="com.is.AutoShop.repository.ClientRepository">
+      <point x="-46.40000000000009" y="-14.5" />
+      <point x="316.11249999999995" y="337.0" />
+      <point x="301.40711382113824" y="337.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.services.CarServiceInterface" target="com.is.AutoShop.model.Car">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.config.ConfigDb" target="com.is.AutoShop.repository.EmployeeRepository">
+      <point x="-42.428571428571445" y="-14.5" />
+      <point x="172.02678571428572" y="337.0" />
+      <point x="147.625" y="337.0" />
+      <point x="52.0" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.repository.CarRepository" target="com.is.AutoShop.model.Car">
+      <point x="0.0" y="-14.5" />
+      <point x="1165.423780487805" y="208.0" />
+      <point x="1027.780923344948" y="208.0" />
+      <point x="18.85714285714289" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.services.CarService" target="com.is.AutoShop.model.Car">
+      <point x="38.625" y="-14.5" />
+      <point x="1226.923780487805" y="387.0" />
+      <point x="1236.923780487805" y="387.0" />
+      <point x="1236.923780487805" y="198.0" />
+      <point x="1037.2094947735193" y="198.0" />
+      <point x="28.285714285714334" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.repository.ClientRepository" target="com.is.AutoShop.model.Client">
+      <point x="0.0" y="-14.5" />
+      <point x="301.40711382113824" y="188.0" />
+      <point x="372.8515582655826" y="188.0" />
+      <point x="-17.555555555555657" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.config.ConfigDb" target="com.is.AutoShop.repository.ClientRepository">
+      <point x="28.285714285714334" y="-14.5" />
+      <point x="242.7410714285715" y="337.0" />
+      <point x="256.40711382113824" y="337.0" />
+      <point x="-45.0" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.controllers.AdminController" target="com.is.AutoShop.model.Client">
+      <point x="-17.125" y="-14.5" />
+      <point x="827.0446283391406" y="307.0" />
+      <point x="868.923780487805" y="307.0" />
+      <point x="868.923780487805" y="158.0" />
+      <point x="425.5182249322493" y="158.0" />
+      <point x="35.111111111111086" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.services.ClientService" target="com.is.AutoShop.services.ClientServiceInterface">
+      <point x="46.40000000000009" y="-14.5" />
+      <point x="408.91250000000014" y="357.0" />
+      <point x="707.9952090592335" y="357.0" />
+      <point x="-69.42857142857144" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.repository.EmployeeRepository" target="com.is.AutoShop.model.Employee">
+      <point x="0.0" y="-14.5" />
+      <point x="95.625" y="59.0" />
+      <point x="466.8696138211383" y="59.0" />
+      <point x="-25.0" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.controllers.HomeController" target="com.is.AutoShop.services.ClientServiceInterface">
+      <point x="-26.799999999999955" y="-14.5" />
+      <point x="997.8237804878049" y="287.0" />
+      <point x="846.8523519163764" y="287.0" />
+      <point x="69.42857142857144" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.model.Client" target="com.is.AutoShop.model.Employee">
+      <point x="0.0" y="-14.5" />
+      <point x="390.40711382113824" y="69.0" />
+      <point x="483.5362804878049" y="69.0" />
+      <point x="-8.333333333333314" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.services.EmployeeService" target="com.is.AutoShop.services.EmployeServiceInterface">
+      <point x="51.375" y="-14.5" />
+      <point x="119.875" y="347.0" />
+      <point x="528.923780487805" y="347.0" />
+      <point x="-59.0" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.controllers.AdminController" target="com.is.AutoShop.model.Car">
+      <point x="28.541666666666657" y="-14.5" />
+      <point x="872.7112950058072" y="347.0" />
+      <point x="912.923780487805" y="347.0" />
+      <point x="912.923780487805" y="208.0" />
+      <point x="990.0666376306621" y="208.0" />
+      <point x="-18.85714285714289" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.services.ClientService" target="com.is.AutoShop.model.Client">
+      <point x="23.200000000000045" y="-14.5" />
+      <point x="385.7125000000001" y="337.0" />
+      <point x="390.40711382113824" y="337.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.controllers.AdminController" target="com.is.AutoShop.model.FuelType">
+      <point x="17.12500000000003" y="-14.5" />
+      <point x="861.2946283391406" y="337.0" />
+      <point x="901.923780487805" y="337.0" />
+      <point x="901.923780487805" y="89.0" />
+      <point x="935.173780487805" y="89.0" />
+      <point x="-12.0" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.config.ConfigDb" target="com.is.AutoShop.repository.CarRepository">
+      <point x="42.428571428571445" y="-14.5" />
+      <point x="256.8839285714286" y="387.0" />
+      <point x="1124.7571138211383" y="387.0" />
+      <point x="-40.66666666666663" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.controllers.LoginController" target="com.is.AutoShop.services.ClientServiceInterface">
+      <point x="49.125" y="-14.5" />
+      <point x="569.9089624467674" y="377.0" />
+      <point x="754.2809233449478" y="377.0" />
+      <point x="-23.14285714285711" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.services.CarService" target="com.is.AutoShop.services.CarServiceInterface">
+      <point x="-38.625" y="-14.5" />
+      <point x="1149.673780487805" y="367.0" />
+      <point x="1068.523780487805" y="367.0" />
+      <point x="59.60000000000002" y="14.5" />
+    </edge>
+    <edge source="com.is.AutoShop.services.EmployeeService" target="com.is.AutoShop.repository.EmployeeRepository">
+      <point x="17.125" y="-14.5" />
+      <point x="85.625" y="387.0" />
+      <point x="95.625" y="387.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0999999999999999" x="668.9374236874237" y="246.8313075813079" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

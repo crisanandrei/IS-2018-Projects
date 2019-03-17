@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-6">
+            <form th:action="@{/logout}" method="post">
+                <p align="right">
+                    <input type="submit" class="btn btn-danger" style="" value="Logoff"/>
+                </p>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form th:action="@{/adminHome/adminTables}", method="get">
+                <input type="submit" class="btn btn-success" value="View Tables"/>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" >
+        <div class="row">
+            <div class="col-md-6">
+                <form th:action="@{/adminHome/addCar}" th:object="${car}" method="post">
+                    <table id="addCar" class="table table-stripped" style="table-layout: fixed;">
+                        <tr>
+                            <th>ADD CAR</th>
+                        </tr>
+
+                            <tbody>
+                            <tr style="width: fit-content;">
+                                <td>
+                                    <label class="label" for="make">Make:</label>
+                                </td>
+                                <td>
+                                    <input type="text" id="make" name="make">
+                                </td>
+                            </tr>
+
+                            <tr style="width: fit-content;">
+                                <td>
+                                    <label class="label" for="model">Model:</label>
+                                </td>
+                                <td>
+                                    <input  type="text" id="model" name="model" >
+                                </td>
+                            </tr>
+                            <tr th:object="${fuelType}" style="width: fit-content;">
+                                <td>
+                                    <label class="label" for="fuelType">FuelType(GAS,DIESEL,GPL,HYBRID):</label>
+                                </td>
+                                <td>
+                                    <input  type="text" id="fuelType" name="fuelType">
+                                </td>
+                            </tr>
+                            <tr style="width: fit-content;">
+                                <td>
+                                    <label class="label" for="fabYear">FabYear:</label>
+                                </td>
+                                <td>
+                                    <input  type="text" id="fabYear" name="fabYear">
+                                </td>
+                            </tr>
+                            <tr th:object="${price}" style="width: fit-content;">
+                                <td>
+                                    <label class="label" for="price">Price:</label>
+                                </td>
+                                <td>
+                                    <input  type="text" id="price" name="price">
+                                </td>
+                            </tr>
+                            <tr style="width: fit-content;">
+                                <td>
+                                    <label class="label" for="description">Description:</label>
+                                </td>
+                                <td>
+                                    <input  type="text" id="description" name="description">
+                                </td>
+                            </tr>
+                            <tr style="width: fit-content;">
+                                <td>
+                                    <label class="label" for="carImage">CarImage:</label>
+                                </td>
+                                <td>
+                                    <input  type="text" id="carImage" name="carImage">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="submit" value="ADD" class="btn btn-success"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+
+            </div>
+
+
+            <div class="col-md-6">
+                <form th:action="@{/adminHome/deleteCar}" method="post">
+                    <table id="deleteCar" class="table table-stripped" style="table-layout: fixed;">
+                        <tr>
+                            <th>Delete Car by ID</th>
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label class="label" for="carId">
+                                        <input type="text" id="carId" name="carId">
+                                    </label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="submit" value="DELETE Car" class="btn btn-success"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <form th:action="@{/adminHome/deleteClient}" method="post">
+                    <table id="deleteClient" class="table table-stripped" style="table-layout: fixed;">
+                        <tr>
+                            <th>Delete Client By ID</th>
+                        </tr>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <label class="label" for="clientID">
+                                    <input type="text" id="clientId" name="clientId">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="DELETE Client" class="btn btn-success"/>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+                <form th:action="@{/adminHome/deleteEmployee}" method="post">
+                    <table id="deleteEmployee" class="table table-stripped" style="table-layout: fixed;">
+                        <tr>
+                            <th>Delete Employee by ID</th>
+                        </tr>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <label class="label" for="carId">
+                                    <input type="text" id="employeeId" name="employeeId">
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="DELETE Emp" class="btn btn-success"/>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+
+            </div>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <form th:action="@{/adminHome/addEmployee}" th:object="${employee}" method="post">
+                    <table id="addEmployee" class="table table-stripped" style="table-layout: fixed;">
+                        <tr>
+                            <th>ADD Employee</th>
+                        </tr>
+
+                        <tbody>
+                        <tr style="width: fit-content;">
+                            <td>
+                                <label class="label" for="firstName">First Name:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="firstName" name="firstName">
+                            </td>
+                        </tr>
+
+                        <tr style="width: fit-content;">
+                            <td>
+                                <label class="label" for="lastName">Last Name:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="lastName" name="lastName" >
+                            </td>
+                        </tr>
+                        <tr style="width: fit-content;">
+                            <td>
+                                <label class="label" for="address">Address:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="address" name="address">
+                            </td>
+                        </tr>
+                        <tr th:object="${salary}" style="width: fit-content;">
+                            <td>
+                                <label class="label" for="salary">Salary : </label>
+                            </td>
+                            <td>
+                                <input type="text" id="salary" name="salary">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="ADD" class="btn btn-success"/>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <form th:action="@{/adminHome/addClient}" th:object="${client}" method="post">
+                    <table id="addClient" class="table table-stripped" style="table-layout: fixed;">
+                        <tr><th>ADD CLIENT</th></tr>
+                        <tbody>
+                        <tr style="width: fit-content;">
+                            <td>
+                                <label class="label" for="userName">Username:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="userName" name="userName">
+                            </td>
+                        </tr>
+
+                        <tr style="width: fit-content;">
+                            <td>
+                                <label class="label" for="password">Password:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="password" name="password" >
+                            </td>
+                        </tr>
+                        <tr style="width: fit-content;">
+                            <td>
+                                <label class="label" for="email">Email:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="email" name="email">
+                            </td>
+                        </tr>
+                        <tr style="width: fit-content;">
+                            <td>
+                                <label class="label" for="firstName">First Name : </label>
+                            </td>
+                            <td>
+                                <input type="text" id="firstName" name="firstName">
+                            </td>
+                        </tr>
+                        <tr style="width: fit-content;">
+                            <td>
+                                <label class="label" for="lastName">Last Name : </label>
+                            </td>
+                            <td>
+                                <input type="text" id="lastName" name="lastName">
+                            </td>
+                        </tr>
+                        <tr style="width: fit-content;">
+                            <td>
+                                <label class="label" for="administrator">Admin(YES/NO) : </label>
+                            </td>
+                            <td>
+                                <input type="text" id="administrator" name="administrator">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="ADD" class="btn btn-success"/>
+                            </td>
+                        </tr>
+
+
+                        </tbody>>
+
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>

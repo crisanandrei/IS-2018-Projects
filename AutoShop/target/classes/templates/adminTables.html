@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}"/>
+    <title>Hello, world!</title>
+</head>
+<body>
+    <div class="row mx-1 px-1">
+    <form th:action="@{/toggle}" method="get">
+        <input type="submit" class="btn btn-warning" value="ToggleTable"/>
+    </form>
+        <a class="mx-2" th:href="@{/adminHome}"><h4 style="color: #b21f2d">Back</h4></a>
+    </div>
+
+
+
+    <div th:if="${toggleClient}" class="container-fluid">
+        <div id="clientT" class="mainbox">
+            <div class="row">
+                <div class="col-md-12">
+                    <table id="clientTable" class="table table-stripped" style="table-layout: fixed">
+                        <tr>
+                            <th>ClientID</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                            <th>email</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Administrator</th>
+                            <th>Edit</th>
+                        </tr>
+                        <tbody th:each="client : ${clients}">
+                            <tr>
+                                <td th:text="${client.getClientId()}"></td>
+                                <td th:text="${client.getUserName()}"></td>
+                                <td th:text="${client.getPassword()}"></td>
+                                <td th:text="${client.getEmail()}"></td>
+                                <td th:text="${client.getFirstName()}"></td>
+                                <td th:text="${client.getLastName()}"></td>
+                                <td th:text="${client.isAdmin()}"></td>
+                                <td> <form th:action="@{'/adminTables/' +  ${client.getClientId()} + '/editClient'}" method="GET"> <button type="submit" class="btn-success">Edit</button>  </form> </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div th:if="${toggleCar}" class="container-fluid">
+        <div id="carT" class="mainbox">
+            <div class="row">
+                <div class="col-md-12">
+                    <table id="carTable" class="table table-stripped" style="table-layout: fixed">
+                        <tr>
+
+                            <th>CarID</th>
+                            <th>Make</th>
+                            <th>Model</th>
+                            <th>FuelType</th>
+                            <th>FabYear</th>
+                            <th>Price</th>
+                            <th>Image</th>
+                            <th>Details</th>
+                            <th>Modify</th>
+                        </tr>
+                        <tbody th:each="car : ${cars}">
+                        <tr>
+                            <td th:text="${car.getCarID()}">CarID</td>
+                            <td th:text="${car.getMake()}">Make</td>
+                            <td th:text="${car.getModel()}">Model</td>
+                            <td th:text="${car.getFuelType()}">FuelType</td>
+                            <td th:text="${car.getFabYear()}">FabYear</td>
+                            <td th:text="${car.getPrice() + ' €'}">Price</td>
+                            <td><img style="width: 150px; height: 120px" th:src="${car.getCarImage()}"></td>
+                            <td th:text="${car.getDescription()}">Description</td>
+
+                            <td> <form th:action="@{'/adminTables/' +  ${car.getCarID()} + '/editCar'}" method="GET"> <button type="submit" class="btn-success">Edit</button>  </form> </td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div th:if="${toggleEmployee}" class="container-fluid">
+        <div id="employeeTable" class="mainbox">
+            <div class="row">
+                <div class="col-md-12">
+                    <table id="EmployeeTablep" class="table table-stripped" style="table-layout: fixed">
+                        <tr>
+                            <th>Id</th>
+                            <th>FirstName</th>
+                            <th>LastName</th>
+                            <th>address</th>
+                            <th>salary</th>
+
+                        </tr>
+                        <tbody th:each="employee : ${employees}">
+                        <tr>
+                            <td th:text="${employee.getId()}">Id</td>
+                            <td th:text="${employee.getFirstName()}">First</td>
+                            <td th:text="${employee.getLastName()}">Last</td>
+                            <td th:text="${employee.getAddress()}">Address</td>
+                            <td th:text="${employee.getSalary()}">Salary</td>
+
+
+                            <td> <form th:action="@{'/adminTables/' +  ${employee.getId()} + '/editEmployee'}" method="GET"> <button type="submit" class="btn-success">Edit</button>  </form> </td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
